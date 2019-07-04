@@ -1,0 +1,18 @@
+{
+  "name": "json-server-midas-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "helpers.js",
+  "scripts": {
+    "server": "json-server ./server.js -c ./config.json --no-cors",
+    "server:json": "json-server ./snapshots/mock.json -c ./config.json --no-cors",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Fernando Moreira <nandomoreira.me@gmail.com> (https://nandomoreira.dev/)",
+  "license": "MIT",
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "json-server": "^0.15.0"
+  }
+}

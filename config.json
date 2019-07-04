@@ -1,0 +1,12 @@
+{
+  "host": "dev.midas.trackmob.com.br",
+  "port": 8181,
+  "delay": 1000,
+  "static": "./",
+  "routes": "./routes.json",
+  "snapshots": "./snapshots",
+  "middlewares": [
+    "./middlewares/method.js",
+    "./middlewares/query.js"
+  ]
+}
