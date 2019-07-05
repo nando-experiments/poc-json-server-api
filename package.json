@@ -4,8 +4,10 @@
   "description": "",
   "main": "helpers.js",
   "scripts": {
-    "server": "json-server ./server.js -c ./config.json --no-cors",
-    "server:json": "json-server ./snapshots/mock.json -c ./config.json --no-cors",
+    "start": "npm run serve",
+    "dev": "npm run serve:json",
+    "serve": "json-server ./server.js -c ./config.json --no-cors",
+    "serve:json": "json-server ./snapshots/mock.json -c ./config.json --no-cors",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "keywords": [],
