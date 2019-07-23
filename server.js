@@ -69,5 +69,63 @@ module.exports = () => ({
   bank_files: bankFiles,
   generate_bank_file: generateBankFile,
   import_bank_file: importBankFile,
-  payments
+  payments,
+  general_info: {
+    '_endpoint': '/admin/general_info',
+    'successful_payments_count': 1141592,
+    'hard_bounces_count': 34425,
+    'soft_bounces_count': 5504,
+    'refunds_count': 12,
+    'chargebacks_count': 0,
+    'charges_count': 40000,
+    'efectiveness_rate': 97.5
+  },
+  total_donations: {
+    '_endpoint': '/admin/total_donations',
+    'unique_donations_count': 20719,
+    'recurring_donations_count': 17000,
+    'canceled_donations_count': 3400,
+    'paused_donations_count': 2000,
+    'total_donations_count': 50000,
+    'donations_per_month': {
+      '2019/07': {
+        'unique_count': 300,
+        'recurring_count': 100,
+        'canceled_count': 100,
+        'paused_count': 100
+      },
+      '2019/06': {
+        'unique_count': 200,
+        'recurring_count': 50,
+        'canceled_count': 2,
+        'paused_count': 1000
+      },
+    }
+  },
+  cohort_data: {
+    '_endpoint': '/admin/cohort_data',
+    'donations_per_month': {
+      '2019/07': {
+        'donations_count': 400,
+        'monthly_taxes': {
+          '1': 100.0
+        }
+      },
+      '2019/06': {
+        'donations_count': 400,
+        'monthly_taxes': {
+          '1': 100.0,
+          '2': 89.7
+        }
+      },
+      '2019/05': {
+        'donations_count': 400,
+        'monthly_taxes': {
+          '1': 100.0,
+          '2': 92.6,
+          '3': 80.0,
+        }
+      }
+    }
+  }
 })
