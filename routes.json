@@ -1,6 +1,5 @@
 {
   "/oauth/token": "/token",
-  "/api/admin/v1/users/me": "/user",
-  "/api/admin/v1/:resource": "/:resource",
-  "/api/admin/v1/:resource/:id": "/:resource/:id"
+  "/api/admin/:resource": "/:resource",
+  "/api/admin/:resource/:id": "/:resource/:id"
 }

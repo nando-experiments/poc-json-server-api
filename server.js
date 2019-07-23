@@ -16,7 +16,7 @@ const user = {
   email: faker.internet.email()
 }
 
-const fileStatusByMonth = [...Array(6)].map((v, i) => ({
+const monthlyMetrics = [...Array(6)].map((v, i) => ({
   files_info: [...Array(6)].map((value, index) => ({
     id: index + 1,
     month: 12 - index,
@@ -33,7 +33,7 @@ const fileStatusByMonth = [...Array(6)].map((v, i) => ({
   }
 }))
 
-const filesList = {
+const bankFiles = {
   type: 'debit',
   files: [...Array(50)].map((value, index) => ({
     id: index + 1,
@@ -64,10 +64,9 @@ const payments = [...Array(20)].map((v, i) => ({
 }))
 
 module.exports = () => ({
-  user,
   token: { ...token, ...{ user } },
-  file_status_by_month: fileStatusByMonth,
-  files_list: filesList,
+  monthly_metrics: monthlyMetrics,
+  bank_files: bankFiles,
   generate_bank_file: generateBankFile,
   import_bank_file: importBankFile,
   payments

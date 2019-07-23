@@ -1,5 +1,5 @@
 {
-  "host": "dev.midas.trackmob.com.br",
+  "host": "192.168.18.39",
   "port": 8181,
   "delay": 1000,
   "static": "./",
