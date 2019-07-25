@@ -1,7 +1,7 @@
 {
   "host": "192.168.18.39",
   "port": 8181,
-  "delay": 1000,
+  "delay": 2000,
   "static": "./",
   "routes": "./routes.json",
   "snapshots": "./snapshots",

@@ -63,6 +63,24 @@ const payments = [...Array(20)].map((v, i) => ({
   currency: 'BRL'
 }))
 
+successfulPayments = faker.random.number(99999)
+hardBounces = faker.random.number(9999)
+softBounces = faker.random.number(9999)
+refunds = faker.random.number(999)
+totalAmount = (successfulPayments + hardBounces + softBounces + refunds)
+
+const generalInfo = {
+  // '_endpoint': '/admin/general_info',
+  'successful_payments_amount': successfulPayments,
+  'hard_bounces_amount': hardBounces,
+  'soft_bounces_amount': softBounces,
+  'refunds_amount': refunds,
+  'total_amount': totalAmount,
+  'chargebacks_count': 1,
+  'charges_count': faker.random.number(9999),
+  'efectiveness_rate': 97.5
+}
+
 module.exports = () => ({
   token: { ...token, ...{ user } },
   monthly_metrics: monthlyMetrics,
@@ -70,16 +88,7 @@ module.exports = () => ({
   generate_bank_file: generateBankFile,
   import_bank_file: importBankFile,
   payments,
-  general_info: {
-    '_endpoint': '/admin/general_info',
-    'successful_payments_amount': 1141592,
-    'hard_bounces_amount': 34425,
-    'soft_bounces_amount': 5504,
-    'refunds_amount': 12,
-    'chargebacks_count': 1,
-    'charges_count': 40000,
-    'efectiveness_rate': 97.5
-  },
+  general_info: generalInfo,
   total_donations: {
     '_endpoint': '/admin/total_donations',
     'unique_donations_count': 20719,
@@ -103,7 +112,7 @@ module.exports = () => ({
     }
   },
   cohort_data: {
-    '_endpoint': '/admin/cohort_data',
+    // '_endpoint': '/admin/cohort_data',
     'donations_per_month': {
       '2019/07': {
         'donations_count': 400,
