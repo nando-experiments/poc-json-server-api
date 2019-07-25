@@ -46,7 +46,7 @@ const bankFiles = {
 }
 
 const generateBankFile = { url: faker.internet.url() }
-const importBankFile = { status: "success" }
+const importBankFile = { status: 'success' }
 
 const payments = [...Array(20)].map((v, i) => ({
   id: faker.random.uuid(),
@@ -72,11 +72,11 @@ module.exports = () => ({
   payments,
   general_info: {
     '_endpoint': '/admin/general_info',
-    'successful_payments_count': 1141592,
-    'hard_bounces_count': 34425,
-    'soft_bounces_count': 5504,
-    'refunds_count': 12,
-    'chargebacks_count': 0,
+    'successful_payments_amount': 1141592,
+    'hard_bounces_amount': 34425,
+    'soft_bounces_amount': 5504,
+    'refunds_amount': 12,
+    'chargebacks_count': 1,
     'charges_count': 40000,
     'efectiveness_rate': 97.5
   },
