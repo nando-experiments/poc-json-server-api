@@ -63,11 +63,11 @@ const payments = [...Array(20)].map((v, i) => ({
   currency: 'BRL'
 }))
 
-successfulPayments = faker.random.number(99999)
-hardBounces = faker.random.number(9999)
-softBounces = faker.random.number(9999)
-refunds = faker.random.number(999)
-totalAmount = (successfulPayments + hardBounces + softBounces + refunds)
+const successfulPayments = faker.random.number(99999)
+const hardBounces = faker.random.number(9999)
+const softBounces = faker.random.number(9999)
+const refunds = faker.random.number(999)
+const totalAmount = (successfulPayments + hardBounces + softBounces + refunds)
 
 const generalInfo = {
   // '_endpoint': '/admin/general_info',
@@ -81,6 +81,146 @@ const generalInfo = {
   'efectiveness_rate': 97.5
 }
 
+const uniqueDonations = faker.random.number(9999)
+const recurringDonations = faker.random.number(9999)
+const canceledDonations = faker.random.number(9999)
+const pausedDonations = faker.random.number(9999)
+const totalDonationsCount = (uniqueDonations + recurringDonations + canceledDonations + pausedDonations)
+
+const totalDonations = {
+  // '_endpoint': '/admin/total_donations',
+  'unique_donations_count': uniqueDonations,
+  'recurring_donations_count': recurringDonations,
+  'canceled_donations_count': canceledDonations,
+  'paused_donations_count': pausedDonations,
+  'total_donations_count': totalDonationsCount,
+  'donations_per_month': {
+    '2018/07': {
+      'unique_count': faker.random.number(999),
+      'recurring_count': faker.random.number(99),
+      'canceled_count': faker.random.number(99),
+      'paused_count': faker.random.number(9999)
+    },
+    '2018/08': {
+      'unique_count': faker.random.number(999),
+      'recurring_count': faker.random.number(99),
+      'canceled_count': faker.random.number(99),
+      'paused_count': faker.random.number(9999)
+    },
+    '2018/09': {
+      'unique_count': faker.random.number(999),
+      'recurring_count': faker.random.number(99),
+      'canceled_count': faker.random.number(99),
+      'paused_count': faker.random.number(9999)
+    },
+    '2018/10': {
+      'unique_count': faker.random.number(999),
+      'recurring_count': faker.random.number(99),
+      'canceled_count': faker.random.number(99),
+      'paused_count': faker.random.number(9999)
+    },
+    '2018/11': {
+      'unique_count': faker.random.number(999),
+      'recurring_count': faker.random.number(99),
+      'canceled_count': faker.random.number(99),
+      'paused_count': faker.random.number(9999)
+    },
+    '2018/12': {
+      'unique_count': faker.random.number(999),
+      'recurring_count': faker.random.number(99),
+      'canceled_count': faker.random.number(99),
+      'paused_count': faker.random.number(9999)
+    },
+    '2019/01': {
+      'unique_count': faker.random.number(999),
+      'recurring_count': faker.random.number(99),
+      'canceled_count': faker.random.number(99),
+      'paused_count': faker.random.number(9999)
+    },
+    '2019/02': {
+      'unique_count': faker.random.number(999),
+      'recurring_count': faker.random.number(999),
+      'canceled_count': faker.random.number(999),
+      'paused_count': faker.random.number(999)
+    },
+    '2019/03': {
+      'unique_count': faker.random.number(999),
+      'recurring_count': faker.random.number(99),
+      'canceled_count': faker.random.number(99),
+      'paused_count': faker.random.number(9999)
+    },
+    '2019/04': {
+      'unique_count': faker.random.number(999),
+      'recurring_count': faker.random.number(99),
+      'canceled_count': faker.random.number(99),
+      'paused_count': faker.random.number(9999)
+    },
+    '2019/05': {
+      'unique_count': faker.random.number(999),
+      'recurring_count': faker.random.number(99),
+      'canceled_count': faker.random.number(99),
+      'paused_count': faker.random.number(9999)
+    },
+    '2019/06': {
+      'unique_count': faker.random.number(999),
+      'recurring_count': faker.random.number(99),
+      'canceled_count': faker.random.number(99),
+      'paused_count': faker.random.number(9999)
+    }
+  }
+}
+
+const cohortData = {
+  '2018/08': {
+    'donations_count': 807,
+    'monthly_taxes': [ 807, 636, 521, 422, 381, 321, 212, 185, 142, 122, 51, 15 ]
+  },
+  '2018/09': {
+    'donations_count': 782,
+    'monthly_taxes': [ 782, 613, 502, 405, 325, 302, 198, 165, 122, 85, 12 ]
+  },
+  '2018/10': {
+    'donations_count': 762,
+    'monthly_taxes': [ 762, 592, 482, 377, 295, 274, 175, 133, 87, 32 ]
+  },
+  '2018/11': {
+    'donations_count': 741,
+    'monthly_taxes': [ 741, 572, 461, 364, 287, 265, 154, 128, 35 ]
+  },
+  '2018/12': {
+    'donations_count': 737,
+    'monthly_taxes': [ 737, 556, 432, 321, 254, 232, 182, 102 ]
+  },
+  '2019/01': {
+    'donations_count': 707,
+    'monthly_taxes': [ 707, 656, 0, 321, 254, 232, 102 ]
+  },
+  '2019/02': {
+    'donations_count': 693,
+    'monthly_taxes': [ 693, 510, 386, 0, 221, 187 ]
+  },
+  '2019/03': {
+    'donations_count': 675,
+    'monthly_taxes': [ 675, 0, 362, 230, 195 ]
+  },
+  '2019/04': {
+    'donations_count': 659,
+    'monthly_taxes': [ 659, 472, 342, 187 ]
+  },
+  '2019/05': {
+    'donations_count': 632,
+    'monthly_taxes': [ 632, 456, 316 ]
+  },
+  '2019/06': {
+    'donations_count': 612,
+    'monthly_taxes': [ 612, 431 ]
+  },
+  '2019/07': {
+    'donations_count': 587,
+    'monthly_taxes': [ 587 ]
+  }
+}
+
 module.exports = () => ({
   token: { ...token, ...{ user } },
   monthly_metrics: monthlyMetrics,
@@ -89,52 +229,6 @@ module.exports = () => ({
   import_bank_file: importBankFile,
   payments,
   general_info: generalInfo,
-  total_donations: {
-    '_endpoint': '/admin/total_donations',
-    'unique_donations_count': 20719,
-    'recurring_donations_count': 17000,
-    'canceled_donations_count': 3400,
-    'paused_donations_count': 2000,
-    'total_donations_count': 50000,
-    'donations_per_month': {
-      '2019/07': {
-        'unique_count': 300,
-        'recurring_count': 100,
-        'canceled_count': 100,
-        'paused_count': 100
-      },
-      '2019/06': {
-        'unique_count': 200,
-        'recurring_count': 50,
-        'canceled_count': 2,
-        'paused_count': 1000
-      },
-    }
-  },
-  cohort_data: {
-    // '_endpoint': '/admin/cohort_data',
-    'donations_per_month': {
-      '2019/07': {
-        'donations_count': 400,
-        'monthly_taxes': {
-          '1': 100.0
-        }
-      },
-      '2019/06': {
-        'donations_count': 400,
-        'monthly_taxes': {
-          '1': 100.0,
-          '2': 89.7
-        }
-      },
-      '2019/05': {
-        'donations_count': 400,
-        'monthly_taxes': {
-          '1': 100.0,
-          '2': 92.6,
-          '3': 80.0,
-        }
-      }
-    }
-  }
+  total_donations: totalDonations,
+  cohort_data: cohortData
 })
