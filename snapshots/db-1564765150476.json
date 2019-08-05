@@ -1102,7 +1102,7 @@
     "total_amount": 77000,
     "chargebacks_count": 1,
     "charges_count": 2423,
-    "efectiveness_rate": 97.5
+    "effectiveness_rate": 97.5
   },
   "total_donations": {
     "unique_donations_count": 3483,
